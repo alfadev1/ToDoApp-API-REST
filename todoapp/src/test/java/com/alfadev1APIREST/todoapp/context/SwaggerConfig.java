@@ -16,11 +16,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author alfadev1
  */
 @Configuration
+
 @EnableSwagger2
-public class SwaggerConfig {
-
+public class SwaggerConfig { 
     @Bean
-
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
@@ -28,6 +27,7 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
+                
     }
 
     private ApiInfo apiInfo() {
@@ -36,7 +36,7 @@ public class SwaggerConfig {
                 "Practica de APIrest",
                 "v1",
                 "termsOfService",
-                new Contact("alfadev1", "https://github.com/alfadev1", "alfarollano@gmail.com"), 
+                new Contact("alfadev1", "www.example.com", "alfarollano@gmail.com"), 
                 "Licencia de API",
                 "ejempliLicenciaUrl", 
                 Collections.emptyList());
