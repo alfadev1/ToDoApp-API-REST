@@ -32,13 +32,13 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "ToDoApi",
+                "toDo API",
                 "Practica de APIrest",
                 "v1",
                 "termsOfService",
-                new Contact("alfadev1", "www.example.com", "alfarollano@gmail.com"), 
+                new Contact("alfadev1", "https://github.com/alfadev1", "alfarollano@gmail.com"), 
                 "Licencia de API",
-                "ejempliLicenciaUrl", 
+                "ejemploLicenciaUrl", 
                 Collections.emptyList());
     }
 }

@@ -20,12 +20,4 @@ spring:
       documentation:
         swagger-ui:
           base-url: todoapp
-    springdoc:
-      api-docs:
-        path: /v3/api-docs
-      swagger-ui:
-        path: /swagger-ui.html
-        operations-sorter: method
-        disable-swagger-default-url: true
-        use-root-path: true
-    packages-to-scan: com.aldadev1.todoapp.controller
+    
