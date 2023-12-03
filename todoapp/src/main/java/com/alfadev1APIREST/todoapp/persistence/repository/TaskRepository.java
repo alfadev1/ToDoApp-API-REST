@@ -20,4 +20,7 @@ public interface TaskRepository extends JpaRepository<Task, Long> {
     @Modifying
     @Query(value = "UPDATE TASK SET TASK_STATUS = 1 WHERE ID =:id", nativeQuery = true)
     public void taskStatusAsLate(@Param("id") Long id);
+    @Modifying
+    @Query(value = "UPDATE TASK SET TASK_STATUS = 1 WHERE TASK_STATUS = 0 AND NOT FINISHED AND NOW() > TIMESTAMPADD(MINUTE, 1, CREATED_DATE)", nativeQuery = true)
+    public void updateAllByTaskStatusAndIfIsFinalized();
 }

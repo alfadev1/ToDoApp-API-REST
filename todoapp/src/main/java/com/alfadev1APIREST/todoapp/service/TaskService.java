@@ -65,5 +65,10 @@ public class TaskService {
         }
         this.repository.taskStatusAsLate(id);
     }
+    
+    @Transactional
+    public void updateAllByTaskStatusAndIfIsFinalized() {
+        this.repository.updateAllByTaskStatusAndIfIsFinalized();
+    }
 
 }

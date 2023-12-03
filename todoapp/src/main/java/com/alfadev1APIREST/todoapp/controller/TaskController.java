@@ -59,4 +59,9 @@ public class TaskController {
         this.service.taskStatusAsLate(id);
         return ResponseEntity.noContent().build();
     }
+    @PatchMapping
+    public ResponseEntity<Void> updateAllByTaskStatusAndIfIsFinalized() {
+        this.service.updateAllByTaskStatusAndIfIsFinalized();
+        return ResponseEntity.noContent().build();        
+    }
 }
